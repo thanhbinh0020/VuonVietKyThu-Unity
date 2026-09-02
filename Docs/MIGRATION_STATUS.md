@@ -33,3 +33,10 @@ Sau khi build/chạy được trên máy thật: profiler → object pooling FX 
 - Giao điểm T/L không còn false-positive tại index 0.
 - Build script dùng versionName `2.0.1-fix`, versionCode `21`.
 - Bộ art PNG đầy đủ được giữ lại trong source.
+
+## Build hardening 2.0.2
+- Ép Unity 6 dùng Android `Activity` để khớp custom manifest `UnityPlayerActivity` và legacy save bridge; Unity 6 mặc định GameActivity cho project mới.
+- Ép output APK, versionName `2.0.2-build-ready`, versionCode `22`.
+- Giữ background/region 720x1280 ở full source resolution; không hạ xuống max 1024.
+- Android texture chuyển ETC2 để tương thích rộng với OpenGL ES 3; art alpha dùng ETC2 RGBA8.
+- Thêm GitHub Actions workflow build APK bằng GameCI/Unity 6000.0.40f1. Workflow cần Unity license secrets và không chứa secret trong source.

@@ -7,3 +7,6 @@
 UserSettings/
 .vscode/
 .idea/
+
+# CI-local signing material
+.ci-signing/

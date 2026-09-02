@@ -1,0 +1,106 @@
+name: Build VVKT Android APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Pre-build source validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f ProjectSettings/ProjectVersion.txt
+          test -f Assets/Editor/BuildAndroid.cs
+          test -f Assets/Resources/Data/levels.json
+          test "$(find Assets/Resources/Art -type f -name '*.png' | wc -l)" -eq 21
+          ! find . -type f \( -name '*.keystore' -o -name '*.jks' -o -name '*.p12' \) | grep -q .
+          python3 - <<'PY'
+          import json
+          d=json.load(open('Assets/Resources/Data/levels.json',encoding='utf-8'))
+          assert len(d['levels']) == 50
+          assert len(d['regions']) == 5
+          print('Pre-build validation: PASS')
+          PY
+
+      - name: Prepare optional existing Android signing key
+        shell: bash
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASS: ${{ secrets.ANDROID_KEYSTORE_PASS }}
+          ANDROID_KEYALIAS_NAME: ${{ secrets.ANDROID_KEYALIAS_NAME }}
+          ANDROID_KEYALIAS_PASS: ${{ secrets.ANDROID_KEYALIAS_PASS }}
+        run: |
+          set -euo pipefail
+          rm -rf .ci-signing
+          if [ -n "${ANDROID_KEYSTORE_BASE64:-}" ]; then
+            mkdir -p .ci-signing
+            printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > .ci-signing/vvkt.keystore
+            chmod 600 .ci-signing/vvkt.keystore
+            {
+              printf 'keystore=.ci-signing/vvkt.keystore\n'
+              printf 'storePass=%s\n' "$ANDROID_KEYSTORE_PASS"
+              printf 'alias=%s\n' "$ANDROID_KEYALIAS_NAME"
+              printf 'aliasPass=%s\n' "$ANDROID_KEYALIAS_PASS"
+            } > .ci-signing/signing.properties
+            chmod 600 .ci-signing/signing.properties
+            echo 'Existing app signing key prepared for Unity build.'
+          else
+            echo 'No Android signing secret configured; Unity debug signing will be used.'
+          fi
+
+      - name: Cache Unity Library
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: vvkt-unity-${{ runner.os }}-6000.0.40f1-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            vvkt-unity-${{ runner.os }}-6000.0.40f1-
+
+      - name: Build Android APK with Unity 6
+        id: unityBuild
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: .
+          unityVersion: 6000.0.40f1
+          targetPlatform: Android
+          buildMethod: VuonVietKyThu.Editor.BuildAndroid.PerformBuild
+          customParameters: -vvktSigningProperties .ci-signing/signing.properties
+
+      - name: Verify APK exists
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s Builds/VuonVietKyThu-2.0.2-build-ready.apk
+          ls -lh Builds/VuonVietKyThu-2.0.2-build-ready.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: VuonVietKyThu-2.0.2-build-ready-apk
+          path: Builds/VuonVietKyThu-2.0.2-build-ready.apk
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload Unity build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unity-build-log
+          path: Builds/unity-build.log
+          if-no-files-found: ignore
+          retention-days: 14

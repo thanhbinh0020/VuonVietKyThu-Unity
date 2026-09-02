@@ -10,4 +10,4 @@ fi
 [[ -n "$UNITY" ]] || { echo "Không tìm thấy Unity Editor. Cài Unity 6 + Android Build Support."; exit 2; }
 mkdir -p "$ROOT/Builds"
 "$UNITY" -batchmode -quit -projectPath "$ROOT" -executeMethod VuonVietKyThu.Editor.BuildAndroid.PerformBuild -logFile "$ROOT/Builds/unity-build.log"
-echo "APK: $ROOT/Builds/VuonVietKyThu-2.0.1-fix.apk"
+echo "APK: $ROOT/Builds/VuonVietKyThu-2.0.2-build-ready.apk"

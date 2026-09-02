@@ -25,10 +25,10 @@ Windows PowerShell:
 Hoặc trong Unity: **Vườn Việt → Build Android APK**.
 
 APK dự kiến:
-`Builds/VuonVietKyThu-2.0.1-fix.apk`
+`Builds/VuonVietKyThu-2.0.2-build-ready.apk`
 
 ## Lưu ý quan trọng
-Môi trường ChatGPT hiện tại không cài Unity Editor/Android module, vì vậy source đã được tạo và kiểm tra tĩnh nhưng chưa thể trung thực khẳng định đã chạy Unity compile/IL2CPP/Gradle hay tạo APK Unity tại đây. Build script đã cấu hình package, versionCode 21 và playtest keystore cũ.
+Môi trường ChatGPT hiện tại không cài Unity Editor/Android module, vì vậy source đã được tạo và kiểm tra tĩnh nhưng chưa thể trung thực khẳng định đã chạy Unity compile/IL2CPP/Gradle hay tạo APK Unity tại đây. Build script đã cấu hình package, versionCode 22 và playtest keystore cũ.
 
 
 ## 2.0.1 FIX
@@ -39,3 +39,6 @@ Môi trường ChatGPT hiện tại không cài Unity Editor/Android module, vì
 - Sửa phát hiện giao điểm T/L để không nhận nhầm ô 0 thành Bomb.
 - Giữ toàn bộ PNG art trong `Assets/Resources/Art/`; không chứa keystore.
 - EditMode test được chặn khỏi assembly thường bằng `UNITY_INCLUDE_TESTS`; khi thiết lập Test Assembly trong Unity có thể bật lại test runner chuẩn.
+
+## Cloud build (GitHub Actions)
+Repo có workflow `.github/workflows/build-android.yml` để build APK bằng Unity 6000.0.40f1 trên GitHub Actions. Vì Unity Editor bắt buộc kích hoạt license, hãy cấu hình `UNITY_LICENSE`, `UNITY_EMAIL`, `UNITY_PASSWORD` trong GitHub Actions Secrets; không ghi các giá trị này vào source hoặc chat công khai.

@@ -8,4 +8,4 @@ if([string]::IsNullOrWhiteSpace($Unity)){
 }
 & $Unity -batchmode -quit -projectPath $Root -executeMethod VuonVietKyThu.Editor.BuildAndroid.PerformBuild -logFile "$Root\Builds\unity-build.log"
 if($LASTEXITCODE -ne 0){ throw "Unity build thất bại. Xem Builds\unity-build.log" }
-Write-Host "APK: $Root\Builds\VuonVietKyThu-2.0.1-fix.apk"
+Write-Host "APK: $Root\Builds\VuonVietKyThu-2.0.2-build-ready.apk"

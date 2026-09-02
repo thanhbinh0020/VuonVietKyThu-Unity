@@ -1,0 +1,1487 @@
+{
+  "regions": [
+    {
+      "name": "Vườn sông nước",
+      "subtitle": "Miền Tây",
+      "featuredFruits": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "name": "Đồng lúa ban mai",
+      "subtitle": "Bắc Bộ",
+      "featuredFruits": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "name": "Đồi chè trong sương",
+      "subtitle": "Trung Du",
+      "featuredFruits": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "name": "Biển xanh nắng gió",
+      "subtitle": "Duyên Hải",
+      "featuredFruits": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "name": "Cao nguyên rực rỡ",
+      "subtitle": "Tây Nguyên",
+      "featuredFruits": [
+        0,
+        2,
+        5
+      ]
+    }
+  ],
+  "levels": [
+    {
+      "id": 1,
+      "region": 0,
+      "localIndex": 0,
+      "moves": 30,
+      "typeCount": 5,
+      "jelly": 0,
+      "goalBias": 0.35,
+      "tutorialStep": 1,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 5
+        }
+      ],
+      "starScores": [
+        700,
+        1150,
+        1650
+      ]
+    },
+    {
+      "id": 2,
+      "region": 0,
+      "localIndex": 1,
+      "moves": 30,
+      "typeCount": 5,
+      "jelly": 0,
+      "goalBias": 0.35,
+      "tutorialStep": 2,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 7
+        }
+      ],
+      "starScores": [
+        900,
+        1450,
+        2100
+      ]
+    },
+    {
+      "id": 3,
+      "region": 0,
+      "localIndex": 2,
+      "moves": 30,
+      "typeCount": 5,
+      "jelly": 0,
+      "goalBias": 0.32,
+      "tutorialStep": 3,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 6
+        },
+        {
+          "fruitType": 4,
+          "count": 6
+        }
+      ],
+      "starScores": [
+        1400,
+        2200,
+        3200
+      ]
+    },
+    {
+      "id": 4,
+      "region": 0,
+      "localIndex": 3,
+      "moves": 30,
+      "typeCount": 5,
+      "jelly": 4,
+      "goalBias": 0.3,
+      "tutorialStep": 4,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 7
+        },
+        {
+          "fruitType": 0,
+          "count": 7
+        }
+      ],
+      "starScores": [
+        1900,
+        3000,
+        4300
+      ]
+    },
+    {
+      "id": 5,
+      "region": 0,
+      "localIndex": 4,
+      "moves": 30,
+      "typeCount": 5,
+      "jelly": 6,
+      "goalBias": 0.3,
+      "tutorialStep": 5,
+      "starterSpecials": 1,
+      "goals": [
+        {
+          "fruitType": 4,
+          "count": 8
+        },
+        {
+          "fruitType": 1,
+          "count": 8
+        }
+      ],
+      "starScores": [
+        2300,
+        3600,
+        5100
+      ]
+    },
+    {
+      "id": 6,
+      "region": 0,
+      "localIndex": 5,
+      "moves": 29,
+      "typeCount": 5,
+      "jelly": 8,
+      "goalBias": 0.28,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 9
+        },
+        {
+          "fruitType": 4,
+          "count": 9
+        }
+      ],
+      "starScores": [
+        2700,
+        4200,
+        5900
+      ]
+    },
+    {
+      "id": 7,
+      "region": 0,
+      "localIndex": 6,
+      "moves": 29,
+      "typeCount": 5,
+      "jelly": 8,
+      "goalBias": 0.27,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 7
+        },
+        {
+          "fruitType": 1,
+          "count": 7
+        },
+        {
+          "fruitType": 4,
+          "count": 7
+        }
+      ],
+      "starScores": [
+        3000,
+        4700,
+        6600
+      ]
+    },
+    {
+      "id": 8,
+      "region": 0,
+      "localIndex": 7,
+      "moves": 29,
+      "typeCount": 5,
+      "jelly": 10,
+      "goalBias": 0.26,
+      "tutorialStep": 0,
+      "starterSpecials": 1,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 8
+        },
+        {
+          "fruitType": 4,
+          "count": 8
+        },
+        {
+          "fruitType": 0,
+          "count": 8
+        }
+      ],
+      "starScores": [
+        3400,
+        5300,
+        7400
+      ]
+    },
+    {
+      "id": 9,
+      "region": 0,
+      "localIndex": 8,
+      "moves": 28,
+      "typeCount": 5,
+      "jelly": 12,
+      "goalBias": 0.25,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 4,
+          "count": 9
+        },
+        {
+          "fruitType": 0,
+          "count": 9
+        },
+        {
+          "fruitType": 1,
+          "count": 9
+        }
+      ],
+      "starScores": [
+        3900,
+        6000,
+        8400
+      ]
+    },
+    {
+      "id": 10,
+      "region": 0,
+      "localIndex": 9,
+      "moves": 28,
+      "typeCount": 5,
+      "jelly": 14,
+      "goalBias": 0.24,
+      "tutorialStep": 0,
+      "starterSpecials": 1,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 10
+        },
+        {
+          "fruitType": 1,
+          "count": 10
+        },
+        {
+          "fruitType": 4,
+          "count": 10
+        }
+      ],
+      "starScores": [
+        4400,
+        6800,
+        9500
+      ]
+    },
+    {
+      "id": 11,
+      "region": 1,
+      "localIndex": 0,
+      "moves": 32,
+      "typeCount": 6,
+      "jelly": 0,
+      "goalBias": 0.14,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 2,
+          "count": 9
+        },
+        {
+          "fruitType": 3,
+          "count": 11
+        }
+      ],
+      "starScores": [
+        2200,
+        3410,
+        4730
+      ]
+    },
+    {
+      "id": 12,
+      "region": 1,
+      "localIndex": 1,
+      "moves": 32,
+      "typeCount": 6,
+      "jelly": 0,
+      "goalBias": 0.135,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 2,
+          "count": 10
+        },
+        {
+          "fruitType": 3,
+          "count": 12
+        }
+      ],
+      "starScores": [
+        2420,
+        3751,
+        5203
+      ]
+    },
+    {
+      "id": 13,
+      "region": 1,
+      "localIndex": 2,
+      "moves": 31,
+      "typeCount": 6,
+      "jelly": 9,
+      "goalBias": 0.13,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 2,
+          "count": 11
+        },
+        {
+          "fruitType": 3,
+          "count": 13
+        },
+        {
+          "fruitType": 5,
+          "count": 14
+        }
+      ],
+      "starScores": [
+        5170,
+        8014,
+        11116
+      ]
+    },
+    {
+      "id": 14,
+      "region": 1,
+      "localIndex": 3,
+      "moves": 31,
+      "typeCount": 6,
+      "jelly": 11,
+      "goalBias": 0.125,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 2,
+          "count": 12
+        },
+        {
+          "fruitType": 3,
+          "count": 14
+        },
+        {
+          "fruitType": 5,
+          "count": 15
+        }
+      ],
+      "starScores": [
+        5720,
+        8866,
+        12298
+      ]
+    },
+    {
+      "id": 15,
+      "region": 1,
+      "localIndex": 4,
+      "moves": 30,
+      "typeCount": 6,
+      "jelly": 13,
+      "goalBias": 0.12000000000000001,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 2,
+          "count": 13
+        },
+        {
+          "fruitType": 3,
+          "count": 15
+        },
+        {
+          "fruitType": 5,
+          "count": 16
+        }
+      ],
+      "starScores": [
+        6270,
+        9718,
+        13480
+      ]
+    },
+    {
+      "id": 16,
+      "region": 1,
+      "localIndex": 5,
+      "moves": 30,
+      "typeCount": 6,
+      "jelly": 15,
+      "goalBias": 0.11500000000000002,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 2,
+          "count": 14
+        },
+        {
+          "fruitType": 3,
+          "count": 16
+        },
+        {
+          "fruitType": 5,
+          "count": 17
+        }
+      ],
+      "starScores": [
+        6820,
+        10571,
+        14663
+      ]
+    },
+    {
+      "id": 17,
+      "region": 1,
+      "localIndex": 6,
+      "moves": 29,
+      "typeCount": 6,
+      "jelly": 17,
+      "goalBias": 0.11000000000000001,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 2,
+          "count": 15
+        },
+        {
+          "fruitType": 3,
+          "count": 17
+        },
+        {
+          "fruitType": 5,
+          "count": 18
+        }
+      ],
+      "starScores": [
+        7370,
+        11424,
+        15846
+      ]
+    },
+    {
+      "id": 18,
+      "region": 1,
+      "localIndex": 7,
+      "moves": 29,
+      "typeCount": 6,
+      "jelly": 19,
+      "goalBias": 0.10500000000000001,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 2,
+          "count": 16
+        },
+        {
+          "fruitType": 3,
+          "count": 18
+        },
+        {
+          "fruitType": 5,
+          "count": 19
+        }
+      ],
+      "starScores": [
+        7920,
+        12276,
+        17028
+      ]
+    },
+    {
+      "id": 19,
+      "region": 1,
+      "localIndex": 8,
+      "moves": 28,
+      "typeCount": 6,
+      "jelly": 21,
+      "goalBias": 0.1,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 2,
+          "count": 17
+        },
+        {
+          "fruitType": 3,
+          "count": 19
+        },
+        {
+          "fruitType": 5,
+          "count": 20
+        }
+      ],
+      "starScores": [
+        8470,
+        13128,
+        18210
+      ]
+    },
+    {
+      "id": 20,
+      "region": 1,
+      "localIndex": 9,
+      "moves": 28,
+      "typeCount": 6,
+      "jelly": 23,
+      "goalBias": 0.09500000000000001,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 2,
+          "count": 18
+        },
+        {
+          "fruitType": 3,
+          "count": 20
+        },
+        {
+          "fruitType": 5,
+          "count": 21
+        }
+      ],
+      "starScores": [
+        9020,
+        13981,
+        19393
+      ]
+    },
+    {
+      "id": 21,
+      "region": 2,
+      "localIndex": 0,
+      "moves": 33,
+      "typeCount": 6,
+      "jelly": 0,
+      "goalBias": 0.12,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 11
+        },
+        {
+          "fruitType": 3,
+          "count": 13
+        }
+      ],
+      "starScores": [
+        2640,
+        4092,
+        5676
+      ]
+    },
+    {
+      "id": 22,
+      "region": 2,
+      "localIndex": 1,
+      "moves": 33,
+      "typeCount": 6,
+      "jelly": 0,
+      "goalBias": 0.11499999999999999,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 12
+        },
+        {
+          "fruitType": 3,
+          "count": 14
+        }
+      ],
+      "starScores": [
+        2860,
+        4433,
+        6149
+      ]
+    },
+    {
+      "id": 23,
+      "region": 2,
+      "localIndex": 2,
+      "moves": 32,
+      "typeCount": 6,
+      "jelly": 10,
+      "goalBias": 0.11,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 13
+        },
+        {
+          "fruitType": 3,
+          "count": 15
+        },
+        {
+          "fruitType": 5,
+          "count": 16
+        }
+      ],
+      "starScores": [
+        5940,
+        9207,
+        12771
+      ]
+    },
+    {
+      "id": 24,
+      "region": 2,
+      "localIndex": 3,
+      "moves": 32,
+      "typeCount": 6,
+      "jelly": 12,
+      "goalBias": 0.105,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 14
+        },
+        {
+          "fruitType": 3,
+          "count": 16
+        },
+        {
+          "fruitType": 5,
+          "count": 17
+        }
+      ],
+      "starScores": [
+        6490,
+        10060,
+        13954
+      ]
+    },
+    {
+      "id": 25,
+      "region": 2,
+      "localIndex": 4,
+      "moves": 31,
+      "typeCount": 6,
+      "jelly": 14,
+      "goalBias": 0.09999999999999999,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 15
+        },
+        {
+          "fruitType": 3,
+          "count": 17
+        },
+        {
+          "fruitType": 5,
+          "count": 18
+        }
+      ],
+      "starScores": [
+        7040,
+        10912,
+        15136
+      ]
+    },
+    {
+      "id": 26,
+      "region": 2,
+      "localIndex": 5,
+      "moves": 31,
+      "typeCount": 6,
+      "jelly": 16,
+      "goalBias": 0.095,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 16
+        },
+        {
+          "fruitType": 3,
+          "count": 18
+        },
+        {
+          "fruitType": 5,
+          "count": 19
+        }
+      ],
+      "starScores": [
+        7590,
+        11764,
+        16318
+      ]
+    },
+    {
+      "id": 27,
+      "region": 2,
+      "localIndex": 6,
+      "moves": 30,
+      "typeCount": 6,
+      "jelly": 18,
+      "goalBias": 0.09,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 17
+        },
+        {
+          "fruitType": 3,
+          "count": 19
+        },
+        {
+          "fruitType": 5,
+          "count": 20
+        }
+      ],
+      "starScores": [
+        8140,
+        12617,
+        17501
+      ]
+    },
+    {
+      "id": 28,
+      "region": 2,
+      "localIndex": 7,
+      "moves": 30,
+      "typeCount": 6,
+      "jelly": 20,
+      "goalBias": 0.08499999999999999,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 18
+        },
+        {
+          "fruitType": 3,
+          "count": 20
+        },
+        {
+          "fruitType": 5,
+          "count": 21
+        }
+      ],
+      "starScores": [
+        8690,
+        13470,
+        18684
+      ]
+    },
+    {
+      "id": 29,
+      "region": 2,
+      "localIndex": 8,
+      "moves": 29,
+      "typeCount": 6,
+      "jelly": 22,
+      "goalBias": 0.07999999999999999,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 19
+        },
+        {
+          "fruitType": 3,
+          "count": 21
+        },
+        {
+          "fruitType": 5,
+          "count": 22
+        }
+      ],
+      "starScores": [
+        9240,
+        14322,
+        19866
+      ]
+    },
+    {
+      "id": 30,
+      "region": 2,
+      "localIndex": 9,
+      "moves": 29,
+      "typeCount": 6,
+      "jelly": 24,
+      "goalBias": 0.075,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 20
+        },
+        {
+          "fruitType": 3,
+          "count": 22
+        },
+        {
+          "fruitType": 5,
+          "count": 23
+        }
+      ],
+      "starScores": [
+        9790,
+        15174,
+        21048
+      ]
+    },
+    {
+      "id": 31,
+      "region": 3,
+      "localIndex": 0,
+      "moves": 34,
+      "typeCount": 6,
+      "jelly": 0,
+      "goalBias": 0.1,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 13
+        },
+        {
+          "fruitType": 2,
+          "count": 15
+        }
+      ],
+      "starScores": [
+        3080,
+        4774,
+        6622
+      ]
+    },
+    {
+      "id": 32,
+      "region": 3,
+      "localIndex": 1,
+      "moves": 34,
+      "typeCount": 6,
+      "jelly": 0,
+      "goalBias": 0.095,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 14
+        },
+        {
+          "fruitType": 2,
+          "count": 16
+        }
+      ],
+      "starScores": [
+        3300,
+        5115,
+        7095
+      ]
+    },
+    {
+      "id": 33,
+      "region": 3,
+      "localIndex": 2,
+      "moves": 33,
+      "typeCount": 6,
+      "jelly": 11,
+      "goalBias": 0.09000000000000001,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 15
+        },
+        {
+          "fruitType": 2,
+          "count": 17
+        },
+        {
+          "fruitType": 4,
+          "count": 18
+        }
+      ],
+      "starScores": [
+        6710,
+        10400,
+        14426
+      ]
+    },
+    {
+      "id": 34,
+      "region": 3,
+      "localIndex": 3,
+      "moves": 33,
+      "typeCount": 6,
+      "jelly": 13,
+      "goalBias": 0.085,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 16
+        },
+        {
+          "fruitType": 2,
+          "count": 18
+        },
+        {
+          "fruitType": 4,
+          "count": 19
+        }
+      ],
+      "starScores": [
+        7260,
+        11253,
+        15609
+      ]
+    },
+    {
+      "id": 35,
+      "region": 3,
+      "localIndex": 4,
+      "moves": 32,
+      "typeCount": 6,
+      "jelly": 15,
+      "goalBias": 0.08,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 17
+        },
+        {
+          "fruitType": 2,
+          "count": 19
+        },
+        {
+          "fruitType": 4,
+          "count": 20
+        }
+      ],
+      "starScores": [
+        7810,
+        12106,
+        16792
+      ]
+    },
+    {
+      "id": 36,
+      "region": 3,
+      "localIndex": 5,
+      "moves": 32,
+      "typeCount": 6,
+      "jelly": 17,
+      "goalBias": 0.07500000000000001,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 18
+        },
+        {
+          "fruitType": 2,
+          "count": 20
+        },
+        {
+          "fruitType": 4,
+          "count": 21
+        }
+      ],
+      "starScores": [
+        8360,
+        12958,
+        17974
+      ]
+    },
+    {
+      "id": 37,
+      "region": 3,
+      "localIndex": 6,
+      "moves": 31,
+      "typeCount": 6,
+      "jelly": 19,
+      "goalBias": 0.07,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 19
+        },
+        {
+          "fruitType": 2,
+          "count": 21
+        },
+        {
+          "fruitType": 4,
+          "count": 22
+        }
+      ],
+      "starScores": [
+        8910,
+        13810,
+        19156
+      ]
+    },
+    {
+      "id": 38,
+      "region": 3,
+      "localIndex": 7,
+      "moves": 31,
+      "typeCount": 6,
+      "jelly": 21,
+      "goalBias": 0.065,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 20
+        },
+        {
+          "fruitType": 2,
+          "count": 22
+        },
+        {
+          "fruitType": 4,
+          "count": 23
+        }
+      ],
+      "starScores": [
+        9460,
+        14663,
+        20339
+      ]
+    },
+    {
+      "id": 39,
+      "region": 3,
+      "localIndex": 8,
+      "moves": 30,
+      "typeCount": 6,
+      "jelly": 23,
+      "goalBias": 0.060000000000000005,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 21
+        },
+        {
+          "fruitType": 2,
+          "count": 23
+        },
+        {
+          "fruitType": 4,
+          "count": 24
+        }
+      ],
+      "starScores": [
+        10010,
+        15516,
+        21522
+      ]
+    },
+    {
+      "id": 40,
+      "region": 3,
+      "localIndex": 9,
+      "moves": 30,
+      "typeCount": 6,
+      "jelly": 24,
+      "goalBias": 0.05500000000000001,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 1,
+          "count": 22
+        },
+        {
+          "fruitType": 2,
+          "count": 24
+        },
+        {
+          "fruitType": 4,
+          "count": 25
+        }
+      ],
+      "starScores": [
+        10450,
+        16198,
+        22468
+      ]
+    },
+    {
+      "id": 41,
+      "region": 4,
+      "localIndex": 0,
+      "moves": 35,
+      "typeCount": 6,
+      "jelly": 0,
+      "goalBias": 0.08,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 15
+        },
+        {
+          "fruitType": 2,
+          "count": 17
+        }
+      ],
+      "starScores": [
+        3520,
+        5456,
+        7568
+      ]
+    },
+    {
+      "id": 42,
+      "region": 4,
+      "localIndex": 1,
+      "moves": 35,
+      "typeCount": 6,
+      "jelly": 0,
+      "goalBias": 0.075,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 16
+        },
+        {
+          "fruitType": 2,
+          "count": 18
+        }
+      ],
+      "starScores": [
+        3740,
+        5797,
+        8041
+      ]
+    },
+    {
+      "id": 43,
+      "region": 4,
+      "localIndex": 2,
+      "moves": 34,
+      "typeCount": 6,
+      "jelly": 12,
+      "goalBias": 0.07,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 17
+        },
+        {
+          "fruitType": 2,
+          "count": 19
+        },
+        {
+          "fruitType": 5,
+          "count": 20
+        }
+      ],
+      "starScores": [
+        7480,
+        11594,
+        16082
+      ]
+    },
+    {
+      "id": 44,
+      "region": 4,
+      "localIndex": 3,
+      "moves": 34,
+      "typeCount": 6,
+      "jelly": 14,
+      "goalBias": 0.065,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 18
+        },
+        {
+          "fruitType": 2,
+          "count": 20
+        },
+        {
+          "fruitType": 5,
+          "count": 21
+        }
+      ],
+      "starScores": [
+        8030,
+        12446,
+        17264
+      ]
+    },
+    {
+      "id": 45,
+      "region": 4,
+      "localIndex": 4,
+      "moves": 33,
+      "typeCount": 6,
+      "jelly": 16,
+      "goalBias": 0.06,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 19
+        },
+        {
+          "fruitType": 2,
+          "count": 21
+        },
+        {
+          "fruitType": 5,
+          "count": 22
+        }
+      ],
+      "starScores": [
+        8580,
+        13299,
+        18447
+      ]
+    },
+    {
+      "id": 46,
+      "region": 4,
+      "localIndex": 5,
+      "moves": 33,
+      "typeCount": 6,
+      "jelly": 18,
+      "goalBias": 0.055,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 20
+        },
+        {
+          "fruitType": 2,
+          "count": 22
+        },
+        {
+          "fruitType": 5,
+          "count": 23
+        }
+      ],
+      "starScores": [
+        9130,
+        14152,
+        19630
+      ]
+    },
+    {
+      "id": 47,
+      "region": 4,
+      "localIndex": 6,
+      "moves": 32,
+      "typeCount": 6,
+      "jelly": 20,
+      "goalBias": 0.05,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 21
+        },
+        {
+          "fruitType": 2,
+          "count": 23
+        },
+        {
+          "fruitType": 5,
+          "count": 24
+        }
+      ],
+      "starScores": [
+        9680,
+        15004,
+        20812
+      ]
+    },
+    {
+      "id": 48,
+      "region": 4,
+      "localIndex": 7,
+      "moves": 32,
+      "typeCount": 6,
+      "jelly": 22,
+      "goalBias": 0.05,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 22
+        },
+        {
+          "fruitType": 2,
+          "count": 24
+        },
+        {
+          "fruitType": 5,
+          "count": 25
+        }
+      ],
+      "starScores": [
+        10230,
+        15856,
+        21994
+      ]
+    },
+    {
+      "id": 49,
+      "region": 4,
+      "localIndex": 8,
+      "moves": 31,
+      "typeCount": 6,
+      "jelly": 24,
+      "goalBias": 0.05,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 23
+        },
+        {
+          "fruitType": 2,
+          "count": 25
+        },
+        {
+          "fruitType": 5,
+          "count": 26
+        }
+      ],
+      "starScores": [
+        10780,
+        16709,
+        23177
+      ]
+    },
+    {
+      "id": 50,
+      "region": 4,
+      "localIndex": 9,
+      "moves": 31,
+      "typeCount": 6,
+      "jelly": 24,
+      "goalBias": 0.05,
+      "tutorialStep": 0,
+      "starterSpecials": 0,
+      "goals": [
+        {
+          "fruitType": 0,
+          "count": 24
+        },
+        {
+          "fruitType": 2,
+          "count": 26
+        },
+        {
+          "fruitType": 5,
+          "count": 27
+        }
+      ],
+      "starScores": [
+        11110,
+        17220,
+        23886
+      ]
+    }
+  ]
+}

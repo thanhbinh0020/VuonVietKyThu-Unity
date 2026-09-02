@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+#if UNITY_EDITOR && UNITY_INCLUDE_TESTS
 using NUnit.Framework;
 using System.Linq;
 namespace VuonVietKyThu.Tests {

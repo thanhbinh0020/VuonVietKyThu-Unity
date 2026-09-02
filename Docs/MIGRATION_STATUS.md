@@ -1,4 +1,4 @@
-# Migration status — 2.0 Unity Alpha
+# Migration status — 2.0.1 FIX
 
 ## Đã có trong source
 - 50 level definitions + 5 vùng.
@@ -13,7 +13,7 @@
 - 3 quality modes, haptic, safe-area, immersive portrait.
 - Mascot idle/cheer 2.5D.
 - Legacy WebView save bridge thử migrate level/xu/tim/booster/cosmetics/stars.
-- Android build automation; signing keystore được giữ ngoài repository và truyền qua biến môi trường.
+- Android build automation; signing key không nằm trong source public.
 
 ## Chưa thể xác minh tại môi trường hiện tại
 - Unity C# compiler/package resolution.
@@ -24,3 +24,12 @@
 
 ## Bước sau alpha
 Sau khi build/chạy được trên máy thật: profiler → object pooling FX → Addressables/atlases → rig mascot → shader/VFX Graph/URP 2D → obstacle mới → 100+ màn → cloud save/live-ops/IAP nếu phát hành thương mại.
+
+
+## Sửa trong 2.0.1 FIX
+- Runtime input service: EventSystem + StandaloneInputModule.
+- Runtime AudioListener fallback.
+- Cascade sau special/booster.
+- Giao điểm T/L không còn false-positive tại index 0.
+- Build script dùng versionName `2.0.1-fix`, versionCode `21`.
+- Bộ art PNG đầy đủ được giữ lại trong source.

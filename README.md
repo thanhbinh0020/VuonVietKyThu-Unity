@@ -1,6 +1,6 @@
-# Vườn Việt Kỳ Thú 2.0 — Unity Migration Alpha
+# Vườn Việt Kỳ Thú 2.0.1 FIX — Unity Migration
 
-Nhánh này chuyển gameplay/render từ WebView sang Unity, giữ package Android `vn.vuonviet.kythu` ; khóa ký playtest cũ không được lưu trong repository public.
+Nhánh này chuyển gameplay/render từ WebView sang Unity, giữ package Android `vn.vuonviet.kythu` và playtest keystore cũ để chuẩn bị cài đè trong quá trình thử nghiệm.
 
 ## Mục tiêu kiến trúc
 - Unity render/UI thay cho WebView DOM/CSS.
@@ -25,7 +25,17 @@ Windows PowerShell:
 Hoặc trong Unity: **Vườn Việt → Build Android APK**.
 
 APK dự kiến:
-`Builds/VuonVietKyThu-2.0.0-unity-alpha.apk`
+`Builds/VuonVietKyThu-2.0.1-fix.apk`
 
 ## Lưu ý quan trọng
-Môi trường ChatGPT hiện tại không cài Unity Editor/Android module, vì vậy source đã được tạo và kiểm tra tĩnh nhưng chưa thể trung thực khẳng định đã chạy Unity compile/IL2CPP/Gradle hay tạo APK Unity tại đây. Build script đã cấu hình package và versionCode 20. Nếu cần ký bằng khóa riêng, dùng các biến môi trường `VVKT_KEYSTORE_PATH`, `VVKT_KEYSTORE_PASS`, `VVKT_KEY_ALIAS`, `VVKT_KEY_ALIAS_PASS`.
+Môi trường ChatGPT hiện tại không cài Unity Editor/Android module, vì vậy source đã được tạo và kiểm tra tĩnh nhưng chưa thể trung thực khẳng định đã chạy Unity compile/IL2CPP/Gradle hay tạo APK Unity tại đây. Build script đã cấu hình package, versionCode 21 và playtest keystore cũ.
+
+
+## 2.0.1 FIX
+- Sửa compile `BuildAndroid.cs` khi đọc biến môi trường signing.
+- Tạo runtime `EventSystem + StandaloneInputModule` để nút/tile nhận chạm ngay cả khi scene được tạo trống.
+- Tạo `AudioListener` dự phòng để SFX có đầu ra âm thanh.
+- Special/booster giờ tiếp tục resolve cascade sau refill.
+- Sửa phát hiện giao điểm T/L để không nhận nhầm ô 0 thành Bomb.
+- Giữ toàn bộ PNG art trong `Assets/Resources/Art/`; không chứa keystore.
+- EditMode test được chặn khỏi assembly thường bằng `UNITY_INCLUDE_TESTS`; khi thiết lập Test Assembly trong Unity có thể bật lại test runner chuẩn.

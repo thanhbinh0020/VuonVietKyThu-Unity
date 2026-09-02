@@ -35,7 +35,7 @@ namespace VuonVietKyThu {
             index=-1;
             for(int a=0;a<info.runs.Count;a++)for(int b=a+1;b<info.runs.Count;b++){
                 var x=info.runs[a];var y=info.runs[b];if(x.horizontal==y.horizontal||x.fruit!=y.fruit)continue;
-                int cross=x.cells.FirstOrDefault(i=>y.cells.Contains(i)); if(y.cells.Contains(cross)){index=cross;return SpecialType.Bomb;}
+                foreach(int cross in x.cells) if(y.cells.Contains(cross)){index=cross;return SpecialType.Bomb;}
             }
             var five=info.runs.FirstOrDefault(r=>r.cells.Count>=5); if(five!=null){index=five.cells.Contains(preferred)?preferred:five.cells[five.cells.Count/2];return SpecialType.Rainbow;}
             var four=info.runs.FirstOrDefault(r=>r.cells.Count==4); if(four!=null){index=four.cells.Contains(preferred)?preferred:four.cells[1];return four.horizontal?SpecialType.RocketRow:SpecialType.RocketColumn;}

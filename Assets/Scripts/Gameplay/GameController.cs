@@ -22,7 +22,12 @@ namespace VuonVietKyThu {
             bool special=board[a].special!=SpecialType.None||board[b].special!=SpecialType.None;var info=Match3Logic.FindMatches(board);
             if(!special&&info.cells.Count==0){Match3Logic.Swap(board,a,b);Render();AudioHaptics.Vibrate(8);busy=false;yield break;}
             moves=Mathf.Max(0,moves-1);AudioHaptics.Vibrate(12);
-            if(special){var clear=ActivateSwapSpecials(a,b);yield return ClearAndCollapse(clear,1,null,-1);}else yield return ResolveMatches(info,b,1);
+            if(special){
+                var clear=ActivateSwapSpecials(a,b);
+                yield return ClearAndCollapse(clear,1,null,-1);
+                var follow=Match3Logic.FindMatches(board);
+                if(follow.cells.Count>0) yield return ResolveMatches(follow,b,2);
+            }else yield return ResolveMatches(info,b,1);
             busy=false;CheckEnd();
         }
         HashSet<int> ActivateSwapSpecials(int a,int b){
@@ -65,7 +70,14 @@ namespace VuonVietKyThu {
             if(id=="pinwheel"){Match3Logic.Shuffle(board,rng);Render();fx.Flash(new Color(.75f,.35f,1f));return;}
             int target=FindGoalTarget();if(target<0)target=rng.Next(64);var clear=new HashSet<int>();if(id=="basket"){clear.Add(target);int r=target/8,c=target%8;foreach(var d in new[]{-8,8,-1,1}){int x=target+d;if(x>=0&&x<64&&(d==1||d==-1?x/8==r:true))clear.Add(x);}}else{int row=target/8;for(int c=0;c<8;c++)clear.Add(row*8+c);}StartCoroutine(BoosterClear(clear));
         }
-        IEnumerator BoosterClear(HashSet<int> clear){busy=true;yield return ClearAndCollapse(ExpandSpecials(clear),1,null,-1);busy=false;CheckEnd();}
+        IEnumerator BoosterClear(HashSet<int> clear){
+            busy=true;
+            yield return ClearAndCollapse(ExpandSpecials(clear),1,null,-1);
+            var follow=Match3Logic.FindMatches(board);
+            if(follow.cells.Count>0) yield return ResolveMatches(follow,-1,2);
+            busy=false;
+            CheckEnd();
+        }
         int FindGoalTarget(){var pending=goals.Where(k=>k.Value>0).Select(k=>k.Key).ToHashSet();for(int i=0;i<64;i++)if(pending.Contains(board[i].fruit))return i;return -1;}
         public void UseExtraMoves(){if(save.Data.inventory.extraMoves<=0)return;save.Data.inventory.extraMoves--;save.Save();moves=5;ended=false;busy=false;ui.HideModal();Render();ui.Toast("+5 lượt — cố lên!");}
     }

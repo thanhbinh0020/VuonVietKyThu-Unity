@@ -7,11 +7,3 @@
 UserSettings/
 .vscode/
 .idea/
-
-# Signing credentials (never commit)
-Signing/
-*.keystore
-*.jks
-*.p12
-*.pem
-*.key
